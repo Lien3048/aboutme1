@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>追逐星星的人｜個人網站</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
+            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #111;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: rgba(255, 255, 255, 0.6);
+            border-bottom: 2px solid #ccc;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #7bdff2, #b388eb, #f69dc3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            opacity: 0.85;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .sidebar,
+        .main {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #555;
+            padding-bottom: 8px;
+            color: #222;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        ul li::marker {
+            content: '★ ';
+            color: #b388eb;
+        }
+
+        .contact a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .music-control {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .music-control button {
+            background: linear-gradient(to right, #b388eb, #f69dc3);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .music-control button:hover {
+            transform: scale(1.05);
+        }
+
+        iframe {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            opacity: 0.6;
+            font-size: 0.9rem;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>追逐星星的人</h1>
+        <p class="subtitle">藍粉紫星空背景｜個人簡介與技能網站</p>
+    </header>
+
+    <div class="container">
+        <!-- 左側欄 -->
+        <div class="sidebar">
+            <h2>關於我 About</h2>
+            <p>您好，我是一名熱愛科技與創意設計的資訊人，擅長網站開發與資料處理，喜歡將邏輯與美學融合。</p>
+            <p>我目前熟悉 Python、Flask、HTML/CSS、資料庫設計，並積極探索使用者體驗與介面美感。</p>
+            <p>除了技術方面，我最主要的興趣是追動漫、聽 K-pop、玩遊戲，其中 K-pop 最為長久，是我從小一接觸至今的重要陪伴。</p>
+
+            <h2>聯絡方式 Contact</h2>
+            <p>Email：<a href="mailto:tp31244@gmail.com">tp31244@gmail.com</a></p>
+            <p>電話：0979653636</p>
+
+            <div class="music-control">
+                <button onclick="playMusic()">🎵 播放背景音樂</button>
+                <div id="music-container">
+                    <iframe width="0" height="0" src="" id="music-frame" title="YouTube player" frameborder="0"
+                        allow="autoplay" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右側主內容 -->
+        <div class="main">
+            <section>
+                <h2>技能專長 Skills</h2>
+                <ul>
+                    <li>Python / Flask / SQLite 應用開發</li>
+                    <li>HTML / CSS / JavaScript 前端設計</li>
+                    <li>資料整理與視覺化分析</li>
+                    <li>專案溝通與文件撰寫能力</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>專題作品 Project</h2>
+                <p>本專題主題為「<strong>MBTI × ETF 投資推薦系統</strong>」，結合心理測驗與金融科技，藉由使用者完成 MBTI 性格測驗，分析其風險傾向後推薦相對應的 ETF
+                    商品，提升新手投資人的參與興趣與信心。</p>
+                <ul>
+                    <li>技術架構：Python、Flask、SQLite、HTML/CSS/JavaScript</li>
+                    <li>導入 MBTI 測驗結果對應投資偏好，推薦適合的 ETF 組合</li>
+                    <li>模擬投資介面可查詢推薦紀錄、查看歷史績效</li>
+                </ul>
+                <p><strong>我主要負責的部分：</strong></p>
+                <ul>
+                    <li>系統使用者的登入與註冊功能</li>
+                    <li>前端頁面初始架構設計與基本樣式配置</li>
+                    <li>協助整合 MBTI 測驗結果與 ETF 對應邏輯的資料流程</li>
+                </ul>
+                <p>本專題強調「個人化投資建議」的應用實踐，融合心理測驗與金融工具，讓使用者更輕鬆進入理財世界。</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 星空下的我 | 設計與開發 by 連彥齊
+    </footer>
+
+    <script>
+        function playMusic() {
+            const iframe = document.getElementById("music-frame");
+            iframe.src = "https://www.youtube.com/embed/q5XqTqgZK8o?autoplay=1&loop=1&playlist=q5XqTqgZK8o";
+            iframe.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
